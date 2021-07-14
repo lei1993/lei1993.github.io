@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - lts/*
 install:
-  - npm ci_cd
+  - npm ci
 script:
   - npm run docs:build
 after_success:
