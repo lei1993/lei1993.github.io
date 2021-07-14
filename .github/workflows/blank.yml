@@ -28,7 +28,7 @@ jobs:
       - name: Run a CI script
         run: npm ci
 
-      - name: install build docs
+      - name: build docs
         run: npm run docs:build
         
       - name: Run a docs script
