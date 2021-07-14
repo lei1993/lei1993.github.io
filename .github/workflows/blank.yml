@@ -26,6 +26,8 @@ jobs:
       - uses: actions/checkout@v2
       # Runs a single command using the runners shell
       - name: Run a CI script
+        env:
+          TOKEN: ${{secrets.HEXO_DEPLOY_PRIVATE_KEY}}
         run: npm ci
         
       - name: Run a docs script
