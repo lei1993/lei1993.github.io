@@ -33,5 +33,5 @@ jobs:
         
       - name: Run a docs script
         env:
-          TOKEN: ${{secrets.HEXO_DEPLOY_PRIVATE_KEY}}
-        run: npm run docs
+            TOKEN: ${{secrets.HEXO_DEPLOY_PRIVATE_KEY}}
+          run: npm run docs
