@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - 10
-cache: yarn
+  - lts/*
 install:
-  - yarn
+  - npm ci
 script:
-  - yarn build
+  - npm run docs:build
 after_success:
   - cd docs/.vuepress/dist
   - git init
