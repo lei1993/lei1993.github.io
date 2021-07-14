@@ -5,7 +5,8 @@ module.exports = {
         nav: [
             { text: '教程', link: '/tutorial/centos.md'},
             { text: '工具', link: '/tools/front.md' },
-            {text: '人工智能', link: '/ai/main.md'}
+            {text: '人工智能', link: '/ai/main.md'},
+            {text: 'leetcode', link: '/leetcode/main.md'}
         ],
         sidebar: [
             '/'
