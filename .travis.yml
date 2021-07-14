@@ -1,11 +1,11 @@
 language: node_js
 node_js:
   - 10
-cache: npm
+cache: yarn
 install:
-  - npm
+  - yarn
 script:
-  - npm build
+  - yarn build
 after_success:
   - cd docs/.vuepress/dist
   - git init
@@ -14,3 +14,6 @@ after_success:
   - git add -A
   - git commit -m 'deploy'
   - git push --quiet --force "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+branches:
+  only:
+    - docs
