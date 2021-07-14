@@ -6,4 +6,4 @@ git config  user.name "lei1993"
 git config  user.email "1052356414@qq.com"
 git add -A
 git commit -m 'deploy'
-git push --force "https://${TOKEN}github.com/lei1993/lei1993.github.io.git" "master:master"
+git push --force "https://github.com/lei1993/lei1993.github.io.git" "master:master"
