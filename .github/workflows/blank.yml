@@ -29,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: install build docs
-        run: npm install && npm run docs:build
+        run: npm run docs:build
         
       - name: Run a docs script
         env:
