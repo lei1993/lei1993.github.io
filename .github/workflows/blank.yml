@@ -32,5 +32,5 @@ jobs:
         
       - name: 部署
         env:
-            TOKEN: ${{secrets.HEXO_DEPLOY_PRIVATE_KEY}}
+            TOKEN: ${{secrets.ACCESS_TOKEN}}
         run: npm run docs
