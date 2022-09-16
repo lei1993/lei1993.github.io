@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'lei\'s home',
+    title: '乐享',
     description: '日常笔记积累',
     themeConfig:{
         nav: [
@@ -24,11 +24,5 @@ module.exports = {
                 ]
             }
         ]
-        // sidebar: [
-
-        //     '/',
-        //     '/tutorial/main.md',
-        //     '/ai/main.md',
-        // ]
     }
 }
