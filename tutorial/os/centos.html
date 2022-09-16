@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CentOS离线安装Nvidia-Docker | 乐享</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="日常笔记积累">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.44646b1f.js" as="script"><link rel="preload" href="/assets/js/2.81d102af.js" as="script"><link rel="preload" href="/assets/js/18.7f63cccc.js" as="script"><link rel="prefetch" href="/assets/js/10.11acddc5.js"><link rel="prefetch" href="/assets/js/11.ca7f4146.js"><link rel="prefetch" href="/assets/js/12.1cb5694a.js"><link rel="prefetch" href="/assets/js/13.69fd89c9.js"><link rel="prefetch" href="/assets/js/14.fece9baa.js"><link rel="prefetch" href="/assets/js/15.1d8196d6.js"><link rel="prefetch" href="/assets/js/16.61192e63.js"><link rel="prefetch" href="/assets/js/17.56fb4742.js"><link rel="prefetch" href="/assets/js/19.69d51513.js"><link rel="prefetch" href="/assets/js/3.b2603645.js"><link rel="prefetch" href="/assets/js/4.ba3164ba.js"><link rel="prefetch" href="/assets/js/5.75a3592b.js"><link rel="prefetch" href="/assets/js/6.0377ba0c.js"><link rel="prefetch" href="/assets/js/7.e59ee139.js"><link rel="prefetch" href="/assets/js/8.98de3f61.js"><link rel="prefetch" href="/assets/js/9.76cd3f1e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">乐享</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/tutorial/main.html" class="nav-link">
+  教程
+</a></div><div class="nav-item"><a href="/tools/front.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/ai/main.html" class="nav-link">
+  人工智能
+</a></div><div class="nav-item"><a href="/leetcode/main.html" class="nav-link">
+  leetcode
+</a></div><div class="nav-item"><a href="/qa/main.html" class="nav-link">
+  智能问答
+</a></div><div class="nav-item"><a href="/paper/main.html" class="nav-link">
+  论文笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tutorial/os/.html" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/tutorial/os/.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/tutorial/os/.html" class="nav-link">
+  typescript
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/tutorial/main.html" class="nav-link">
+  教程
+</a></div><div class="nav-item"><a href="/tools/front.html" class="nav-link">
+  工具
+</a></div><div class="nav-item"><a href="/ai/main.html" class="nav-link">
+  人工智能
+</a></div><div class="nav-item"><a href="/leetcode/main.html" class="nav-link">
+  leetcode
+</a></div><div class="nav-item"><a href="/qa/main.html" class="nav-link">
+  智能问答
+</a></div><div class="nav-item"><a href="/paper/main.html" class="nav-link">
+  论文笔记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tutorial/os/.html" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/tutorial/os/.html" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/tutorial/os/.html" class="nav-link">
+  typescript
+</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="centos离线安装nvidia-docker"><a href="#centos离线安装nvidia-docker" class="header-anchor">#</a> CentOS离线安装Nvidia-Docker</h2> <h3 id="在一台联网的机器上执行"><a href="#在一台联网的机器上执行" class="header-anchor">#</a> 在一台联网的机器上执行</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token assign-left variable">distribution</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release<span class="token punctuation">;</span><span class="token builtin class-name">echo</span> $ID$VERSION_ID<span class="token variable">)</span></span>
+<span class="token function">curl</span> -s -L https://nvidia.github.io/nvidia-docker/<span class="token variable">$distribution</span>/nvidia-docker.repo <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/yum.repos.d/nvidia-docker.repo
+ 
+yum <span class="token function">install</span> --downloadonly nvidia-docker2 --downloaddir<span class="token operator">=</span>/tmp/nvidia
+</code></pre></div><h3 id="将以上安装包上传到无法联网的服务器"><a href="#将以上安装包上传到无法联网的服务器" class="header-anchor">#</a> 将以上安装包上传到无法联网的服务器</h3> <h4 id="执行"><a href="#执行" class="header-anchor">#</a> 执行</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">rpm</span> -ivh libnvidia-container1-1.1.1-1.x86_64.rpm libnvidia-container-tools-1.1.1-1.x86_64.rpm
+ 
+<span class="token function">rpm</span> -ivh nvidia-container-runtime-3.2.0-1.x86_64.rpm nvidia-container-toolkit-1.1.2-2.x86_64.rpm nvidia-docker2-2.3.0-1.noarch.rpm 
+</code></pre></div><p>附：安装包链接</p> <p>包括docker和nvidia-docker所有依赖</p> <p>链接：https://pan.baidu.com/s/1PfCYUjq3pZU0Dq01Gr3LZA
+提取码：tiry</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.44646b1f.js" defer></script><script src="/assets/js/2.81d102af.js" defer></script><script src="/assets/js/18.7f63cccc.js" defer></script>
+  </body>
+</html>
