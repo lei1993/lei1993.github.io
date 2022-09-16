@@ -25,6 +25,7 @@ module.exports = {
             }
         ]
         // sidebar: [
+
         //     '/',
         //     '/tutorial/main.md',
         //     '/ai/main.md',
